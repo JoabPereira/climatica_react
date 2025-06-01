@@ -1,59 +1,20 @@
-import "../style/style.css";
-import { Github, Linkedin } from "lucide-react";
+import CardIntegrante from "../../components/card-integrante";
+import { integrantes } from "../../utils/integrantes";
 
-const Contato = () => {
+
+
+const Contato: React.FC = () => {
   return (
-    <div className="contato">
-      <h3 className="equipe">Integrantes da Equipe</h3>
-      <div className="devs">
-        <div className="joab">
-          <h3>Joab Pereira</h3>
-          <a href="https://github.com/JoabPereira" className="joablink1">
-            <Github size={20} />
-            <span>GitHub</span>
-          </a>
-          <a
-            href="https://www.linkedin.com/in/joabpereira/"
-            className="joablink2"
-          >
-            <Linkedin size={20} />
-            <span>LinkedIn</span>
-          </a>
-        </div>
+    
+    <main className="bg-[#0d7290] h-[65vh] flex flex-col items-center gap-2 !py-3">
+      <h1 className="font-bold text-3xl text-white">Integrantes da Equipe</h1>
 
-        <div className="vittor">
-          <h3>Vittor Gabriel</h3>
-          <a href="https://github.com/VittorSpi" className="vittorlink1">
-            <Github size={20} />
-            <span>GitHub</span>
-          </a>
-          <a
-            href="https://www.linkedin.com/in/vittor-gabriel-557983289?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
-            className="vittorlink2"
-          >
-            <Linkedin size={20} />
-            <span>LinkedIn</span>
-          </a>
-        </div>
-        <div className="jose">
-          <h3>José Lucas</h3>
-          <a href="https://github.com/JoseLucas49" className="joselink1">
-            <Github size={20} />
-            <span>GitHub</span>
-          </a>
-          <Linkedin size={20} />
-          <span>LinkedIn</span>
-        </div>
-
-        <div className="kevin">
-          <h3>Kevin Silva</h3>
-          <Github size={20} />
-          <span>GitHub</span>
-          <Linkedin size={20} />
-          <span>LinkedIn</span>
-        </div>
+      <div className="flex flex-col gap-2">
+         {integrantes.map((integrante, index) => (
+          <CardIntegrante key={index} integrante={integrante}/>
+        ))} 
       </div>
-    </div>
+    </main>
   );
 };
 
