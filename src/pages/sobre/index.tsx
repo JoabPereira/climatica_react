@@ -16,8 +16,7 @@ const Sobre = () => {
         O principal objetivo é oferecer uma ferramenta simples, intuitiva e
         acessível para que qualquer pessoa possa obter dados meteorológicos
         rapidamente, sem depender de aplicativos pesados ou portais complexos.
-        Tudo isso é feito com integração via axios, sem a necessidade de
-        backend.
+        Tudo isso é feito com integração via API, sem a necessidade de backend.
       </p>
     </div>
   );
