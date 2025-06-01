@@ -1,6 +1,6 @@
 # Climática
 
-![Website](https://img.shields.io/badge/Website-Acesse%20agora-blue)(https://joabpereira.github.io/climatica_react/)
+[![Website](https://img.shields.io/badge/Website-Acesse%20agora-blue)](https://joabpereira.github.io/climatica_react/)
 
 ## Descrição
 
