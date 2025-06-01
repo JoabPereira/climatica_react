@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import climalogo from "../../assets/climalogo.png";
 
 const Header = () => {
   return (
@@ -14,7 +15,7 @@ const Header = () => {
       }}
     >
       <img
-        src="/climalogo.png"
+        src={climalogo}
         alt="Logo"
         className="logo"
         width="400"

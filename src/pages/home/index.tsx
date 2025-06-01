@@ -2,16 +2,30 @@ import { useState } from "react";
 import axios from "axios";
 import "../style/style.css";
 
+interface WeatherData {
+  name: string;
+  sys: {
+    country: string;
+  };
+  main: {
+    temp: number;
+    humidity: number;
+  };
+  weather: {
+    description: string;
+  }[];
+}
+
 const Home = () => {
-  const [city, setCity] = useState("");
-  const [data, setData] = useState(null);
-  const [error, setError] = useState("");
+  const [city, setCity] = useState<string>("");
+  const [data, setData] = useState<WeatherData | null>(null);
+  const [error, setError] = useState<string>("");
 
   const API_KEY = "23375dfe8c51530f324b2de536cb3711";
 
   const fetchWeather = async () => {
     try {
-      const response = await axios.get(
+      const response = await axios.get<WeatherData>(
         `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&lang=pt_br&units=metric`
       );
       setData(response.data);
