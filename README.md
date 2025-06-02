@@ -22,7 +22,9 @@ O site é uma ferramenta simples e intuitiva, ideal para quem busca informaçõe
 - #### Passos para instalar
 
   git clone https://github.com/JoabPereira/climatica_react.git
+  
   cd Projeto_Clima
+  
   npm install
 
 - #### Instalar e configurar Tailwind CSS
